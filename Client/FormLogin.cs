@@ -24,41 +24,46 @@ namespace Client
         bool daketnoi = false;
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btnvaogame_Click(object sender, EventArgs e)
-        {
             string hostName = Dns.GetHostName();
-            try
+            try 
             {
-                
+                //trả về cho máy tính chủ với số cổng được chọn từ phạm vi số cổng đã đăng ký.
+                //chứa đựng thông tin  như hostname , IP adress ,alises for host
+                IPHostEntry ipHostEntry = Dns.GetHostEntry(hostName);
+                // danh sách kiểu địa chỉ IP chứa  chứa địa chỉ IP phân giải tên máy chủ đc chứa trong thuộc tính alises
+                IPAddress[] iPAddress = ipHostEntry.AddressList;
+                //tạo giao thức TCP socket
                 TCPclient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                
-                try
+                foreach (IPAddress ip in iPAddress)
                 {
-                    
-                    // kết nối socket đến remove endpoint ( localhost sever )
-                    ipe = new IPEndPoint(IPAddress.Parse(txip.Text), 9124);
-                    TCPclient.Connect(ipe);
-                    daketnoi = true;
-                    
+                    try
+                    {
+                        ipe = new IPEndPoint(IPAddress.Parse(ip.ToString()), 9124);
+                        // kết nối socket đến remove endpoint ( localhost sever )
+                        
+                        TCPclient.Connect(ipe);
+                        daketnoi = true;
+                        break;
+                    }
+                    catch { }
                 }
-                catch { }
-                
                 if (!daketnoi)
                 {
                     MessageBox.Show("Không tìm thấy server");
-                    Application.Exit();
+                    Application.Exit(); 
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Không tìm thấy server");
-                Application.Exit();
+                Application.Exit();    
             }
+        }
 
-            
+        private void btnvaogame_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 if (txtusername.Text == string.Empty)
                 {
                     MessageBox.Show("Username is not empty!");
@@ -66,7 +71,7 @@ namespace Client
                 else
                 {
                     byte[] data = new byte[1024];
-                    data = Encoding.UTF8.GetBytes("NAMECLIENT|," + txtusername.Text + ",");
+                    data = Encoding.Unicode.GetBytes("NAMECLIENT|," + txtusername.Text + ",");
                     TCPclient.Send(data, data.Length, SocketFlags.None);
 
 
@@ -75,9 +80,12 @@ namespace Client
                     frm.client = TCPclient;
                     frm.Show();
                     this.Hide();
-
                 }
-            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

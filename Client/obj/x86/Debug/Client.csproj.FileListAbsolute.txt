@@ -65,26 +65,14 @@ D:\Documents\LTM\Game Caro-20200621T044921Z-001\Game Caro\Client\obj\x86\Debug\C
 D:\Documents\LTM\Game Caro-20200621T044921Z-001\Game Caro\Client\obj\x86\Debug\Client.csproj.CoreCompileInputs.cache
 D:\Documents\LTM\Game Caro-20200621T044921Z-001\Game Caro\Client\obj\x86\Debug\Client.exe
 D:\Documents\LTM\Game Caro-20200621T044921Z-001\Game Caro\Client\obj\x86\Debug\Client.pdb
-D:\Download\caro\Game Caro\Client\obj\x86\Debug\Client.csprojAssemblyReference.cache
-D:\Download\caro\Game Caro\Client\obj\x86\Debug\Client.FormGame.resources
-D:\Download\caro\Game Caro\Client\obj\x86\Debug\Client.FormLogin.resources
-D:\Download\caro\Game Caro\Client\obj\x86\Debug\Client.MainMenu.resources
-D:\Download\caro\Game Caro\Client\obj\x86\Debug\Client.Properties.Resources.resources
-D:\Download\caro\Game Caro\Client\obj\x86\Debug\Client.FormRule.resources
-D:\Download\caro\Game Caro\Client\obj\x86\Debug\Client.csproj.GenerateResource.cache
-D:\Download\caro\Game Caro\Client\obj\x86\Debug\Client.csproj.CoreCompileInputs.cache
-D:\Download\caro\Game Caro\Client\obj\x86\Debug\Client.exe
-D:\Download\caro\Game Caro\Client\obj\x86\Debug\Client.pdb
-D:\Download\caro\Game Caro\Client\bin\Debug\Client.exe
-D:\Download\caro\Game Caro\Client\bin\Debug\Client.pdb
-C:\Users\Dell\Desktop\caro\Game Caro\Client\bin\Debug\Client.exe
-C:\Users\Dell\Desktop\caro\Game Caro\Client\obj\x86\Debug\Client.csprojAssemblyReference.cache
-C:\Users\Dell\Desktop\caro\Game Caro\Client\obj\x86\Debug\Client.FormGame.resources
-C:\Users\Dell\Desktop\caro\Game Caro\Client\obj\x86\Debug\Client.FormLogin.resources
-C:\Users\Dell\Desktop\caro\Game Caro\Client\obj\x86\Debug\Client.MainMenu.resources
-C:\Users\Dell\Desktop\caro\Game Caro\Client\obj\x86\Debug\Client.Properties.Resources.resources
-C:\Users\Dell\Desktop\caro\Game Caro\Client\obj\x86\Debug\Client.FormRule.resources
-C:\Users\Dell\Desktop\caro\Game Caro\Client\obj\x86\Debug\Client.csproj.GenerateResource.cache
-C:\Users\Dell\Desktop\caro\Game Caro\Client\obj\x86\Debug\Client.csproj.CoreCompileInputs.cache
-C:\Users\Dell\Desktop\caro\Game Caro\Client\obj\x86\Debug\Client.exe
-C:\Users\Dell\Desktop\caro\Game Caro\Client\obj\x86\Debug\Client.pdb
+C:\Users\USER\Desktop\Game Caro\Client\bin\Debug\Client.exe
+C:\Users\USER\Desktop\Game Caro\Client\bin\Debug\Client.pdb
+C:\Users\USER\Desktop\Game Caro\Client\obj\x86\Debug\Client.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\Game Caro\Client\obj\x86\Debug\Client.FormGame.resources
+C:\Users\USER\Desktop\Game Caro\Client\obj\x86\Debug\Client.FormLogin.resources
+C:\Users\USER\Desktop\Game Caro\Client\obj\x86\Debug\Client.MainMenu.resources
+C:\Users\USER\Desktop\Game Caro\Client\obj\x86\Debug\Client.Properties.Resources.resources
+C:\Users\USER\Desktop\Game Caro\Client\obj\x86\Debug\Client.FormRule.resources
+C:\Users\USER\Desktop\Game Caro\Client\obj\x86\Debug\Client.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\Game Caro\Client\obj\x86\Debug\Client.exe
+C:\Users\USER\Desktop\Game Caro\Client\obj\x86\Debug\Client.pdb

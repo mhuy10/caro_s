@@ -357,6 +357,7 @@ namespace Client
         {
             client.Close();
             Application.Exit();
+            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -389,7 +390,7 @@ namespace Client
             rule.Show();
         }
 
-        void reset()
+        /*void reset()//bat dau vong choi #
         {
             for (int i = 0; i <= 20; i++)
                 for (int j = 0; j <= 20; j++)
@@ -402,17 +403,21 @@ namespace Client
 
             label6.Text = diemm.ToString();
             label5.Text = diemdt.ToString();
-            TG1 = 60;
+            TG1 = 60;//set thoi gian =120;
             banco.Refresh();
-        }
+            */
         private void btLoad_Click(object sender, EventArgs e)
         {
-            ;
+            lbPlayer.Items.Clear();
+            laydanhsachplayer();
+            ltbListRoom.Items.Clear();
+            laydanhsachphonggame();
         }
         
         private void btLoadRoom_Click(object sender, EventArgs e)
         {
-            
+            ltbListRoom.Items.Clear();
+            laydanhsachphonggame();
         }
 
         private void FormGame_FormClosing(object sender, FormClosingEventArgs e)
@@ -422,12 +427,14 @@ namespace Client
 
         private void btReset_Click(object sender, EventArgs e)
         {
-            
+            MyScore = 0;
+            CompScore = 0;
+            tbYou.Text = MyScore.ToString();
+            tbComp.Text = CompScore.ToString();
         }
 
         private void ltbdanhsachphonggame_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             str = ltbListRoom.SelectedItem.ToString();
             a_str = str.Split('(');
             str = a_str[0].Replace("Phòng", "").Trim();

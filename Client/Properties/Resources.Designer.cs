@@ -133,6 +133,16 @@ namespace Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bgcaro {
             get {
                 object obj = ResourceManager.GetObject("bgcaro", resourceCulture);
@@ -173,6 +183,26 @@ namespace Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cloud {
+            get {
+                object obj = ResourceManager.GetObject("cloud", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cloud1 {
+            get {
+                object obj = ResourceManager.GetObject("cloud1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cropped_1920_1080_538072 {
             get {
                 object obj = ResourceManager.GetObject("cropped-1920-1080-538072", resourceCulture);
@@ -196,6 +226,26 @@ namespace Client.Properties {
         internal static System.Drawing.Bitmap pexels_photo_531880 {
             get {
                 object obj = ResourceManager.GetObject("pexels-photo-531880", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pic1 {
+            get {
+                object obj = ResourceManager.GetObject("pic1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pic3 {
+            get {
+                object obj = ResourceManager.GetObject("pic3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

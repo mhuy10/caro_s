@@ -52,7 +52,7 @@ namespace Server
                 btOpenServ.Visible = false;
                 btCloseServ.Visible = true;
 
-                AppendTextThongBao("Sẵn Sàng Lằng Nghe Kết Nối Từ Client");
+                AppendTextThongBao("\nSẵn Sàng Lằng Nghe Kết Nối Từ Client");
             }
             catch(Exception ex)
             {

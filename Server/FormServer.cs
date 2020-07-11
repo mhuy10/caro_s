@@ -189,23 +189,7 @@ namespace Server
                     ple.room = null;
                 }
             }
-            /*else
-            {
-                if (ple.room.siso == 2)
-                {
-                    Room r = ple.room;
-                    data = Encoding.Unicode.GetBytes("BANLACHUPHONG|," + "Người Chơi " + r.plnguoichoi2.name + " Đã thoát,");
-                    r.plnguoichoi1.socket.Send(data, data.Length, SocketFlags.None);
-                    r.siso = 1;
-                    r.plnguoichoi2 = null;
-                    r.plnguoichoi1.room = r;
-                }
-                else
-                {
-                    phong.Remove(ple.room);
-                    ple.room = null;
-                }
-            }*/
+            
 
         }
         private void vaophong(string str,Player ple)

@@ -402,22 +402,7 @@ namespace Client
             rule.Show();
         }
 
-        /*void reset()//bat dau vong choi #
-        {
-            for (int i = 0; i <= 20; i++)
-                for (int j = 0; j <= 20; j++)
-                    Board[i, j].luot = 2;
-            for (int i = 0; i < 19; i++)
-                for (int j = 0; j < 19; j++)
-                    Board[i, j] = 0;
-            flags = 1;
-            winho = 0;
-
-            label6.Text = diemm.ToString();
-            label5.Text = diemdt.ToString();
-            TG1 = 60;//set thoi gian =120;
-            banco.Refresh();
-            */
+        
         private void btLoad_Click(object sender, EventArgs e)
         {
             lbPlayer.Items.Clear();

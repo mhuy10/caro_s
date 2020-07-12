@@ -119,10 +119,12 @@
   </resheader>
   <data name="rbRule.Text" xml:space="preserve">
     <value>
-Bắt đầu ván mỗi người sẽ bỏ ra 1 cược.
+1. Mỗi ván game chỉ có 2 người chơi
+2. Mỗi người chơi sẽ lần lượt được đánh chữ X hoặc O trên bàn cờ
+3. Người chơi nào được 5 chữ X hoặc O liên tiếp trên một hàng ngang, hàng dọc , hàng chéo sẽ thắng ván game
+4. Mỗi người chơi sẽ có 120s để đánh, nếu sau 120s không đánh người chơi đó sẽ thua ván game
+5. Sau khi kết thúc người chơi có thể tiếp tục chơi tiếp hoặc thoát ra ngoài
 
-  - Trên bàn cờ 20X20 ô vuông. Một người đi X, một người đi O.
-
-  - Khi đến lượt mình, người chơi phải tích vào một ô trên bàn cờ. Người chơi phải tìm cách tích đủ 5 ô theo chiều dọc hoặc chiều ngang hoặc đường chéo mà không bị chặn 2 đầu thì sẽ thắng.</value>
+</value>
   </data>
 </root>

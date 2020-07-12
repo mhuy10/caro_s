@@ -106,8 +106,8 @@ namespace Client
             return false;
         }
         Rectangle rect = new Rectangle();
-        private Bitmap QuanO = new Bitmap("..//..//bmpHuman.png");
-        private Bitmap QuanX = new Bitmap("..//..//bmpMachine.png");
+        private Bitmap QuanO = new Bitmap("..//..//1.png");
+        private Bitmap QuanX = new Bitmap("..//..//2.png");
         private Bitmap Thang = new Bitmap("..//..//thang.png");
         private Bitmap Thua = new Bitmap("..//..//thua.png");
         int x, y;
@@ -134,7 +134,7 @@ namespace Client
                     rect = new Rectangle(0, 10, 413, 381);
                     Graphics g = panel1.CreateGraphics();
                     g.DrawImage(Thang, rect);
-                    if(MessageBox.Show("Do you want play agian?", "Ok", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if(MessageBox.Show("Bạn muốn chơi lại ?", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
                         pnlgame.Visible = false;
                         pnlgame.Visible = true;
@@ -208,6 +208,8 @@ namespace Client
                 }
             }
         }
+
+        int songuoichoi = 0;
         private void LangNgheServer2(string s,string str)
         {
             switch (s)
@@ -235,7 +237,10 @@ namespace Client
                     break;
                 case "BANLACHUPHONG":
                     NguoiChoi = 2;
+                    songuoichoi = 1;
                     rtbcontentchat.AppendText("\n" + str.Split(',')[1]);
+                    MessageBox.Show("Đối thủ đã thoát, bạn thắng");
+                    DuocDanh = false;
                     break;
                 case "DANHSACHPHONGGAME":
                     danhsachphonggame(str);
@@ -268,6 +273,13 @@ namespace Client
             DuocDanh = true;
             a_str = str.Split(',');
             rtbcontentchat.AppendText("\n"+a_str[1]+" đã vào phòng");
+            NguoiChoi = 2;
+            if (songuoichoi == 1)
+            {
+                rtbcontentchat.AppendText("\n" + str.Split(',')[1]);
+                MessageBox.Show("Đối thủ đã thoát, bạn thắng");
+                DuocDanh = false;
+            }
         }
         private void Idphong(string str)
         {
@@ -281,7 +293,7 @@ namespace Client
             rect = new Rectangle(0, 10, 413, 281);
             Graphics g = panel1.CreateGraphics();
             g.DrawImage(Thua, rect);
-            if (MessageBox.Show("Do you want play agian?", "Ok", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn muốn chơi lại ?", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 pnlgame.Visible = false;
                 pnlgame.Visible = true;
@@ -416,8 +428,7 @@ namespace Client
         
         private void btLoadRoom_Click(object sender, EventArgs e)
         {
-            ltbListRoom.Items.Clear();
-            laydanhsachphonggame();
+            
         }
 
         private void FormGame_FormClosing(object sender, FormClosingEventArgs e)

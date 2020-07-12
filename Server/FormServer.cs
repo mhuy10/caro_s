@@ -171,7 +171,7 @@ namespace Server
         private void thoatphonggame(string str,byte[] data,Player ple)
         {
             a_str = str.Split(',');
-            //if (int.Parse(a_str[1]) == 2)
+            
             {
                 if (ple.room.siso == 2)
                 {
@@ -242,8 +242,8 @@ namespace Server
 
         private void laydanhsachplayer(Player ply)
         {
-            //if (phong.Count > 0)
-            {
+            
+            
                 byte[] data = new byte[1024];
                 string danhsachplayer = "DANHSACHPLAYER|,";
                 foreach (Player p in player)
@@ -252,7 +252,7 @@ namespace Server
                 }
                 data = Encoding.Unicode.GetBytes(danhsachplayer);
                 ply.socket.Send(data, data.Length, SocketFlags.None);
-            }
+            
         }
         private void layidphong(Player ple)
         {

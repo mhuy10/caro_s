@@ -34,13 +34,13 @@ namespace Server
         private void button1_Click(object sender, EventArgs e) // mở server để lắng nghe CLient
         {
             try
-            {   //(IPAdress.any) cung cấp 1 địa chỉ IP chỉ ra rằng máy chủ phải lằng nghe hoạt động  của máy khách trên tất cả các giao diện mang 
+            {   //(IPAdress.any) cung cấp 1 địa chỉ IP chỉ ra rằng máy chủ phải lằng nghe hoạt động của máy khách trên tất cả các giao diện mang 
                 ipe = new IPEndPoint(IPAddress.Any, 9124); 
                 // tạo socket sever bằng giao thức TCP socket 
-                // tạo socket sever bằng giao thức TCP socket 
+             
                 TCPserver = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                // socket liên kết với endpoint ( điểm cuối sử dụng  bind)
-                 TCPserver.Bind(ipe);
+                // socket liên kết với endpoint 
+                TCPserver.Bind(ipe);
                 //tối đa cho 100 máy client cho phép kết nối nếu máy thứ 101 thì phản hồi là sever đang bận
                 TCPserver.Listen(100);
 
@@ -69,19 +69,19 @@ namespace Server
         private void LangNgheClient()
         {
 
-            // chạy liên tục  lắng nghe  không dừng 
+            // chạy liên tục lắng nghe không dừng 
             while (true)
             {
                 try
                 {
 
-                    TCPclient = TCPserver.Accept();         //chấp nhận kết nối của client
-                    Player pl = new Player(); // tạo 1 cái play er
+                    TCPclient = TCPserver.Accept();//chấp nhận kết nối của client
+                    Player pl = new Player(); // tạo 1 player
                     pl.socket = TCPclient;
-                    pl.ipaddress = pl.socket.RemoteEndPoint.ToString();     //cỗng kết nối của client
+                    pl.ipaddress = pl.socket.RemoteEndPoint.ToString();//cổng kết nối của client
                     player.Add(pl);
 
-                    thclient = new Thread(LangNgheClientMoi);   // thread để các client không xung đột 
+                    thclient = new Thread(LangNgheClientMoi); // thread để các client không xung đột 
                     thclient.IsBackground = true;
                     // bắt đầu chạy ( phương thức LangNgheClientMoi)) player -> nhiều player thì sẽ chia nhiều luồng không xung đột
                     thclient.Start(pl);
